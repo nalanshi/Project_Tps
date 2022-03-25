@@ -23,16 +23,13 @@ public class Main {
         URIBuilder ubi = new URIBuilder("https://www.googleapis.com/books/v1/volumes");
         ubi.addParameter("q","pride+prejudice");
         ubi.addParameter("download","epub");
-        ubi.addParameter("key","AIzaSyBjMDhk3r9psbNzULGuS5in0IoIP6XYj-U");
+        ubi.addParameter("key","");
         URI uri = ubi.build();
         HttpGet get = new HttpGet(uri);
         ClassicHttpResponse response = client.execute(get);
         HttpEntity entity = response.getEntity();
         String str = EntityUtils.toString(entity);
         System.out.println(str);
-
-
-
 
     }
 }
